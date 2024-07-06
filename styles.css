@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #e8f4f8;
+    --text-color: #333;
+    --accent-color: #e74c3c;
+    --project-bg: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#skills ul, #interests ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills li, #interests li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#skills li:hover, #interests li:hover {
+    transform: translateY(-3px);
+    background-color: var(--accent-color);
+}
+
+#projects {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#projects h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+#projects article {
+    background-color: var(--project-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 0 0 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#projects article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#projects article:hover .project-image img {
+    transform: scale(1.05);
+}
+
+#projects h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    margin: 0 20px 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+#projects p {
+    flex-grow: 1;
+    margin: 0 20px 20px;
+}
+
+#projects a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+#projects a:hover {
+    background-color: var(--accent-color);
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+#contact a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
