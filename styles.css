@@ -446,6 +446,7 @@ section {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .view-more-btn::before {
